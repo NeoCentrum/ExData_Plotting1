@@ -33,7 +33,7 @@ plot4 <- function(){
   axis(1,at=c(as.numeric(strptime("1/2/2007 00:00:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("1/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("2/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S"))),labels=c("Thu","Fri","Sat"))
 
   #plot Top-Right data
-  plot(plotdata$Voltage ~ as.numeric(strptime(paste(plotdata$Date,plotdata$Time,sep=" "),format = "%d/%m/%Y %H:%M:%S")), type="l",xlab="datetime",ylab="Global Active Power(kilowatts)",xaxt="n")
+  plot(plotdata$Voltage ~ as.numeric(strptime(paste(plotdata$Date,plotdata$Time,sep=" "),format = "%d/%m/%Y %H:%M:%S")), type="l",xlab="datetime",ylab="Voltage",xaxt="n")
   #adjust x-axis 
   axis(1,at=c(as.numeric(strptime("1/2/2007 00:00:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("1/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("2/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S"))),labels=c("Thu","Fri","Sat"))
   
@@ -55,7 +55,7 @@ plot4 <- function(){
   
   
   #plot Bottom-Right data
-  plot(plotdata$Global_reactive_power ~ as.numeric(strptime(paste(plotdata$Date,plotdata$Time,sep=" "),format = "%d/%m/%Y %H:%M:%S")), type="l",xlab="datetime",ylab="Global Active Power(kilowatts)",xaxt="n")
+  plot(plotdata$Global_reactive_power ~ as.numeric(strptime(paste(plotdata$Date,plotdata$Time,sep=" "),format = "%d/%m/%Y %H:%M:%S")), type="l",xlab="datetime",ylab="Global_reactive_power",xaxt="n")
   #adjust x-axis 
   axis(1,at=c(as.numeric(strptime("1/2/2007 00:00:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("1/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S")),as.numeric(strptime("2/2/2007 23:59:00",format = "%d/%m/%Y %H:%M:%S"))),labels=c("Thu","Fri","Sat"))
   
